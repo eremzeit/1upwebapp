@@ -6,6 +6,7 @@ import Header from '../components/header.js'
 import FhirPatient from '../components/fhir/patient.js'
 import FhirAllergyIntolerance from '../components/fhir/allergyintolerance.js'
 import FhirCondition from '../components/fhir/condition.js'
+import Observation from '../components/fhir/elements/observation.js'
 
 export default class Dashboard extends React.Component {
   static async getInitialProps ({ req, res }) {
@@ -47,6 +48,8 @@ export default class Dashboard extends React.Component {
         return <FhirCondition {...resource} />
       case 'AllergyIntolerance':
         return <FhirAllergyIntolerance {...resource} />
+      case 'Observation':
+        return <Observation {...resource} />
       default:
         return JSON.stringify(resource)
     }

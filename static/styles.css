@@ -62,3 +62,17 @@ td {
   padding-top: 1rem;
   padding-right: 1rem;
 }
+
+/* consider setting up css libraries to help break out styles into separate files/scopes */
+.observation h2 {
+  color: #1399fb;
+  display: 'inline-block';
+}
+
+.observation table .field-name {
+  /* normally id opt to use a specific number for font weight but i'm trying to match 
+   * the styling used by <strong> tags.  I didn't use the <strong> tags myself because that
+   * mixes the styling with the html content, which is an anti-pattern */
+  font-weight: bold;
+}
+
